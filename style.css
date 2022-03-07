@@ -25,6 +25,27 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -439,10 +460,101 @@ li .description {
 		margin: 0px;
 		padding: 0 15px;
 	}
-	footer {
-		margin-top: 2050px;
+	.footer-div {
+		margin: 50px;
+		padding: 50px;
 	}
 	}
 
 
 /* End of all :P*/
+
+.btn {
+	position: relative;
+  
+	display: block;
+	margin: 10px auto;
+	padding: 10px;
+  
+	overflow: hidden;
+  
+	border-width: 0;
+	outline: none;
+	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+	
+	background-color: #72BFF1;
+	color: #ecf0f1;
+	
+	transition: background-color 3s;
+  }
+  
+  .btn:hover, .btn:focus {
+	background-color: #72BFF1;
+  }
+  
+  .btn > * {
+	position: relative;
+  }
+  
+  .btn span {
+	display: block;
+	padding: 12px 24px;
+  }
+  
+  .btn:before {
+	content: "";
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	display: block;
+	width: 0;
+	padding-top: 0;
+	  
+	border-radius: 100%;
+	
+	background-color: rgba(236, 240, 241, .3);
+	
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+  }
+  
+  .btn:active:before {
+	width: 120%;
+	padding-top: 120%;
+	
+	transition: width .5s ease-out, padding-top .5s ease-out;
+  }
+  
+  /* Styles, not important */
+  *, *:before, *:after {
+	box-sizing: border-box;
+  }
+  
+  html {
+	position: relative;
+	height: 100%;
+  }
+  
+
+  
+  .btn.orange {
+	background-color: #e67e22;
+  }
+  
+  .btn.orange:hover, .btn.orange:focus {
+	background-color: #d35400;
+  }
+  
+  .btn.red {
+	background-color: #e74c3c;
+  }
+  
+  .btn.red:hover, .btn.red:focus {
+	background-color: #c0392b;
+  }
